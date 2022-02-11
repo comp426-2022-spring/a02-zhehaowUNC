@@ -65,7 +65,15 @@ export function countFlips(array) {
   var numofTail = 0
   var numofHead = 0
   array.forEach(item => item === "heads" ? numofHead ++:numofTail++);
-  return {heads: numofHead, tails: numofTail}
+  if (numofHead === 0){
+  return {tails: numofTail}
+  }
+  else if(numofTail === 0){
+    return {heads: numofHead}
+  }
+  else{
+    return {heads: numofHead, tails:numofTail}
+  }
 }
 
 /** Flip a coin!
