@@ -6,4 +6,7 @@ const args = minimist(process.argv.slice(2))
 
 args["number"]
 const number = args.number || 1
-console.log(coin.coinFlips(number))
+var a = []
+a = coin.coinFlips(number)
+console.log(a)
+console.log(coin.countFlips(a))
